@@ -25,7 +25,7 @@ title: markdown测试
 
 ### 代码块
 
-``` python
+{% highlight python linenos %} 
 
 @requires_authorization
 def somefunc(param1='', param2=0):
@@ -38,7 +38,7 @@ class SomeClass:
 >>> message = '''interpreter
 ... prompt'''
 
-``` 
+{% endhighlight %}
 
 ### LaTeX 公式
 
