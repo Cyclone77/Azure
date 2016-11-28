@@ -9,8 +9,7 @@ title: 我的Blog
     <li>
         {{ post.date | date_to_string }} 
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        {{ post.excerpt | remove: '<p>' | remove: '</p>'  }}
-        
+                
         {{ post.content | strip_html | truncate:200 }}
     </li>
     {% endfor %}
