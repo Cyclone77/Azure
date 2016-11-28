@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 我的Blog
+title: fillchar
 ---
 <h2>{{ page.title }}</h2>
 <p>最新文章</p>
@@ -9,8 +9,6 @@ title: 我的Blog
     <li>
         {{ post.date | date_to_string }} 
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                
-        {{ post.content | strip_html | truncate:200 }}
     </li>
     {% endfor %}
 </ul>
