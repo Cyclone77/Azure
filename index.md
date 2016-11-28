@@ -1,6 +1,5 @@
 ---
 layout: default
-title: fillchar
 ---
 <h2>{{ page.title }}</h2>
 <p>最新文章</p>
