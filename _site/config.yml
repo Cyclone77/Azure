@@ -1,0 +1,6 @@
+baseurl: '/Azure'
+
+markdown: kramdown
+
+kramdown:
+  input: GFM

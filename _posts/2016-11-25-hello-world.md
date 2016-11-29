@@ -1,6 +1,8 @@
 ---
 layout: default
 title: 你好，世界
+tags:
+    - Other
 ---
 
 # {{ page.title }}

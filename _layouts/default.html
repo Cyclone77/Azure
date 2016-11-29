@@ -4,9 +4,16 @@
 {% include head.html %}
 
 <body>
-   
-   {% include nav.html %}
-   
+
+    {% include nav.html %}
+    <ul class="tags">
+        {% for tag in site.tags %}
+        <li>
+            <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    
     <div class="markdown-body">
         {{ content }}
     </div>

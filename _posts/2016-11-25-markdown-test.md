@@ -1,6 +1,8 @@
 ---
 layout: default
 title: markdown测试
+tags:
+    - Markdown
 ---
 
 # 欢迎使用马克飞象
