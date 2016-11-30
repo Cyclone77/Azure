@@ -12,25 +12,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <title>markdown测试</title>
     <link rel="stylesheet" href="/css/Brackets-markdown.css">
+    <script src="/js/Default.js"></script>
 </head>
 
-<body>
-   
-    <ul class="nav navbar-nav">
-    <li>
-        <a href="/">首页</a>
-    </li>
-    
-        
-        <li>
-            <a href="/about/">关于我</a>
-        </li>
-        
-    
-        
-    
-</ul>
-   
+<body>    
     <div class="markdown-body">
         <h1 id="欢迎使用马克飞象">欢迎使用马克飞象</h1>
 
@@ -62,25 +47,26 @@
   <p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— <a href="https://zh.wikipedia.org/wiki/Markdown">维基百科</a></p>
 </blockquote>
 
-<p>正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为<strong>粗体</strong>或者<em>斜体</em>，创建一个<a href="http://www.example.com">链接</a>或一个脚注<sup id="fnref:demo"><a href="#fn:demo" class="footnote">1</a></sup>。下面列举了几个高级功能，更多语法请按<code>Ctrl + /</code>查看帮助。</p>
+<p>正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为<strong>粗体</strong>或者<em>斜体</em>，创建一个<a href="http://www.example.com">链接</a>或一个脚注<sup id="fnref:demo"><a href="#fn:demo" class="footnote">1</a></sup>。下面列举了几个高级功能，更多语法请按<code class="highlighter-rouge">Ctrl + /</code>查看帮助。</p>
 
 <p>excerpt_separator</p>
 
 <h3 id="代码块">代码块</h3>
 
-<pre><code class="language-python">
-@requires_authorization
-def somefunc(param1='', param2=0):
-    '''A docstring'''
-    if param1 &gt; param2: # interesting
-        print 'Greater'
-    return (param2 - param1 + 1) or None
-class SomeClass:
-    pass
-&gt;&gt;&gt; message = '''interpreter
-... prompt'''
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="nd">@requires_authorization</span>
+<span class="k">def</span> <span class="nf">somefunc</span><span class="p">(</span><span class="n">param1</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">param2</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="s">'''A docstring'''</span>
+    <span class="k">if</span> <span class="n">param1</span> <span class="o">&gt;</span> <span class="n">param2</span><span class="p">:</span> <span class="c"># interesting</span>
+        <span class="k">print</span> <span class="s">'Greater'</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">param2</span> <span class="o">-</span> <span class="n">param1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">None</span>
+<span class="k">class</span> <span class="nc">SomeClass</span><span class="p">:</span>
+    <span class="k">pass</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">message</span> <span class="o">=</span> <span class="s">'''interpreter
+... prompt'''</span>
 
 </code></pre>
+</div>
 
 <h3 id="latex-公式">LaTeX 公式</h3>
 
@@ -141,7 +127,7 @@ Bob--&gt;Alice: I am good thanks!
 
 <h3 id="复选框">复选框</h3>
 
-<p>使用 <code>- [ ]</code> 和 <code>- [x]</code> 语法可以创建复选框，实现 todo-list 等功能。例如：</p>
+<p>使用 <code class="highlighter-rouge">- [ ]</code> 和 <code class="highlighter-rouge">- [x]</code> 语法可以创建复选框，实现 todo-list 等功能。例如：</p>
 
 <ul>
   <li>[x] 已完成事项</li>
@@ -162,10 +148,10 @@ Bob--&gt;Alice: I am good thanks!
 <h2 id="印象笔记相关">印象笔记相关</h2>
 
 <h3 id="笔记本和标签">笔记本和标签</h3>
-<p><strong>马克飞象</strong>增加了<code>@(笔记本)[标签A|标签B]</code>语法, 以选择笔记本和添加标签。 <strong>绑定账号后</strong>， 输入<code>(</code>自动会出现笔记本列表，请从中选择。</p>
+<p><strong>马克飞象</strong>增加了<code class="highlighter-rouge">@(笔记本)[标签A|标签B]</code>语法, 以选择笔记本和添加标签。 <strong>绑定账号后</strong>， 输入<code class="highlighter-rouge">(</code>自动会出现笔记本列表，请从中选择。</p>
 
 <h3 id="笔记标题">笔记标题</h3>
-<p><strong>马克飞象</strong>会自动使用文档内出现的第一个标题作为笔记标题。例如本文，就是第一行的 <code>欢迎使用马克飞象</code>。</p>
+<p><strong>马克飞象</strong>会自动使用文档内出现的第一个标题作为笔记标题。例如本文，就是第一行的 <code class="highlighter-rouge">欢迎使用马克飞象</code>。</p>
 
 <h3 id="快捷编辑">快捷编辑</h3>
 <p>保存在印象笔记中的笔记，右上角会有一个红色的编辑按钮，点击后会回到<strong>马克飞象</strong>中打开并编辑该笔记。</p>
@@ -181,7 +167,7 @@ Bob--&gt;Alice: I am good thanks!
 </blockquote>
 
 <h3 id="离线存储">离线存储</h3>
-<p><strong>马克飞象</strong>使用浏览器离线存储将内容实时保存在本地，不必担心网络断掉或浏览器崩溃。为了节省空间和避免冲突，已同步至印象笔记并且不再修改的笔记将删除部分本地缓存，不过依然可以随时通过<code>文档管理</code>打开。</p>
+<p><strong>马克飞象</strong>使用浏览器离线存储将内容实时保存在本地，不必担心网络断掉或浏览器崩溃。为了节省空间和避免冲突，已同步至印象笔记并且不再修改的笔记将删除部分本地缓存，不过依然可以随时通过<code class="highlighter-rouge">文档管理</code>打开。</p>
 
 <blockquote>
   <p><strong>注意：</strong>虽然浏览器存储大部分时候都比较可靠，但印象笔记作为专业云存储，更值得信赖。以防万一，<strong>请务必经常及时同步到印象笔记</strong>。</p>
@@ -189,22 +175,22 @@ Bob--&gt;Alice: I am good thanks!
 
 <h2 id="编辑器相关">编辑器相关</h2>
 <h3 id="设置">设置</h3>
-<p>右侧系统菜单（快捷键<code>Ctrl + M</code>）的<code>设置</code>中，提供了界面字体、字号、自定义CSS、vim/emacs 键盘模式等高级选项。</p>
+<p>右侧系统菜单（快捷键<code class="highlighter-rouge">Ctrl + M</code>）的<code class="highlighter-rouge">设置</code>中，提供了界面字体、字号、自定义CSS、vim/emacs 键盘模式等高级选项。</p>
 
 <h3 id="快捷键">快捷键</h3>
 
-<p>帮助    <code>Ctrl + /</code>
-同步文档    <code>Ctrl + S</code>
-创建文档    <code>Ctrl + Alt + N</code>
-最大化编辑器    <code>Ctrl + Enter</code>
-预览文档 <code>Ctrl + Alt + Enter</code>
-文档管理    <code>Ctrl + O</code>
-系统菜单    <code>Ctrl + M</code></p>
+<p>帮助    <code class="highlighter-rouge">Ctrl + /</code>
+同步文档    <code class="highlighter-rouge">Ctrl + S</code>
+创建文档    <code class="highlighter-rouge">Ctrl + Alt + N</code>
+最大化编辑器    <code class="highlighter-rouge">Ctrl + Enter</code>
+预览文档 <code class="highlighter-rouge">Ctrl + Alt + Enter</code>
+文档管理    <code class="highlighter-rouge">Ctrl + O</code>
+系统菜单    <code class="highlighter-rouge">Ctrl + M</code></p>
 
-<p>加粗    <code>Ctrl + B</code>
-插入图片    <code>Ctrl + G</code>
-插入链接    <code>Ctrl + L</code>
-提升标题    <code>Ctrl + H</code></p>
+<p>加粗    <code class="highlighter-rouge">Ctrl + B</code>
+插入图片    <code class="highlighter-rouge">Ctrl + G</code>
+插入链接    <code class="highlighter-rouge">Ctrl + L</code>
+提升标题    <code class="highlighter-rouge">Ctrl + H</code></p>
 
 <h2 id="关于收费">关于收费</h2>
 
@@ -222,7 +208,7 @@ Bob--&gt;Alice: I am good thanks!
 <div class="footnotes">
   <ol>
     <li id="fn:demo">
-      <p>这是一个示例脚注。请查阅 <a href="https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#footnotes">MultiMarkdown 文档</a> 关于脚注的说明。 <strong>限制：</strong> 印象笔记的笔记内容使用 <a href="https://dev.yinxiang.com/doc/articles/enml.php">ENML</a> 格式，基于 HTML，但是不支持某些标签和属性，例如id，这就导致<code>脚注</code>和<code>TOC</code>无法正常点击。 <a href="#fnref:demo" class="reversefootnote">&#8617;</a></p>
+      <p>这是一个示例脚注。请查阅 <a href="https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#footnotes">MultiMarkdown 文档</a> 关于脚注的说明。 <strong>限制：</strong> 印象笔记的笔记内容使用 <a href="https://dev.yinxiang.com/doc/articles/enml.php">ENML</a> 格式，基于 HTML，但是不支持某些标签和属性，例如id，这就导致<code class="highlighter-rouge">脚注</code>和<code class="highlighter-rouge">TOC</code>无法正常点击。 <a href="#fnref:demo" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
