@@ -1,11 +1,11 @@
- <ul class="nav navbar-nav">
+ <ul class="navbar">
     <li>
-        <a href="{{ site.baseurl }}/">首页</a>
+        <a class="menu menu-select" href="{{ site.baseurl }}/">C</a>
     </li>
     {% for page in site.pages %}
         {% if page.title %}
         <li>
-            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+            <a class="menu" href="{{ page.url | prepend: site.baseurl }}" title="{{ page.title }}"></a>
         </li>
         {% endif %}
     {% endfor %}

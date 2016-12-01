@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Javascript defineProperty
 tags:
     - Javascript

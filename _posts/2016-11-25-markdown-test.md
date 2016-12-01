@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: markdown测试
 tags:
     - Markdown
@@ -16,8 +16,6 @@ tags:
 - **深度整合** ：支持选择笔记本和添加标签，支持从印象笔记跳转编辑，轻松管理。
 
 -------------------
-
-[TOC]
 
 ## Markdown简介
 
@@ -57,27 +55,6 @@ $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 | Computer  | 1600 USD |  5   |
 | Phone     |   12 USD |  12  |
 | Pipe      |    1 USD | 234  |
-
-
-### 流程图
-```flow
-st=>start: Start
-e=>end
-op=>operation: My Operation
-cond=>condition: Yes or No?
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-
-以及时序图:
-
-```sequence
-Alice->Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!
-```
 
 > **提示：**想了解更多，请查看**流程图**[语法][3]以及**时序图**[语法][4]。
 

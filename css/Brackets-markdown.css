@@ -1,21 +1,4 @@
-html {
-    background: #fefefe;
-    font-size: 100%;
-    overflow-y: scroll;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-}
 
-body {
-    color: #444;
-    font-family: "Microsoft Yahei", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    line-height: 1.5em;
-    padding: 1em;
-    margin: auto;
-    max-width: 42em;
-    background: #fefefe;
-}
 
 .markdown-body a {
     color: #0645ad;
@@ -115,8 +98,9 @@ body {
 .markdown-body blockquote {
     color: #666666;
     margin: 0;
-    padding-left: 2em;
-    border-left: 0.5em #EEE solid;
+    padding: 0.1em 1em;
+    border-left: 0.6em rgba(102, 128, 153, 0.14) solid;
+    background-color: rgba(102, 128, 153, 0.08);
 }
 
 .markdown-body hr {
@@ -132,7 +116,7 @@ body {
 .markdown-body code,
 .markdown-body kbd,
 .markdown-body samp {
-    color: #000;
+    color: #fff;
     font-family: Consolas;
     _font-family: 'courier new', monospace;
     font-size: 0.98em;
@@ -149,7 +133,7 @@ body {
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
-    background-color: #f7f7f7;
+    background-color: #23241f;
     border-radius: 3px;
 }
 
