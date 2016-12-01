@@ -8,6 +8,10 @@
     height: 100%;
     background: #2a2a2a;
 }
+.nav-cy *{
+    margin: 0;
+    padding: 0;
+}
 
 .nav-cy .navbar li {
     display: block;
@@ -27,26 +31,4 @@
 .nav-cy .navbar .menu-select {
     background: #e78170;
     text-shadow: 0 1px 0 #de533a;
-}
-
-
-/*图标*/
-
-.menu i {
-    height: 16px;
-    width: 16px;
-    display: block;
-    margin: auto;
-}
-
-.menu i.index {
-    background-image: url(../font-img/index.png);
-}
-
-.menu i.about {
-    background-image: url(../font-img/about.png);
-}
-
-.menu i.phone {
-    background-image: url(../font-img/phone.png);
 }

@@ -1,10 +1,10 @@
 /*主页包含左logo的模版*/
 
-.markdown-body {
+.default {
     width: 100%;
 }
 
-.markdown-body .show-con .left {
+.default .show-con .left {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -15,16 +15,39 @@
     background-size: cover;
 }
 
-.markdown-body .show-con .right {
-    margin-left: 400px;
-    margin-right: 50px;
+.default .show-con .right {
+    margin-left: 345px;
 }
 
 .right .page-con {
-    padding-left: 15px;
+    padding: 0 20px;
 }
 
 .right .core {
     height: 50px;
     border-bottom: 2px solid #d9d9d9;
+}
+
+.right .core .search {
+    position: relative;
+    width: 300px;
+    float: right;
+}
+
+.search input[type="search"] {
+    width: 298px;
+    height: 40px;
+    border: 5px solid #cccccc;
+    text-indent: 5px;
+}
+
+.search .icon-search {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: #cccccc;
+    cursor: pointer;
 }

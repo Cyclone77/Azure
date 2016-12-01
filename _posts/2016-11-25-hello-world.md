@@ -3,6 +3,7 @@ layout: page
 title: 你好，世界
 tags:
     - Other
+    - Javascript
 ---
 
 # {{ page.title }}

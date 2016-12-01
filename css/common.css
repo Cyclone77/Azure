@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 html {
     background: #fefefe;
     font-size: 100%;
@@ -14,4 +9,30 @@ body {
     font-size: 12px;
     line-height: 1.5em;
     background: #fefefe;
+}
+button, input, select, textarea{
+    outline: 0 none;
+}
+
+/*图标*/
+.menu i {
+    height: 16px;
+    width: 16px;
+    display: block;
+    margin: auto;
+}
+
+.menu i.index {
+    background-image: url(../font-img/index.png);
+}
+
+.menu i.about {
+    background-image: url(../font-img/about.png);
+}
+
+.menu i.phone {
+    background-image: url(../font-img/phone.png);
+}
+.menu i.find {
+    background-image: url(../font-img/find.png);
 }
