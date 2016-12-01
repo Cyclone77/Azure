@@ -1,6 +1,30 @@
-.markdown-body{
+/*主页包含左logo的模版*/
+
+.markdown-body {
     width: 100%;
 }
-.page-con{
-    
+
+.markdown-body .show-con .left {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 45px;
+    width: 300px;
+    background-image: url(../images/leftbg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.markdown-body .show-con .right {
+    margin-left: 400px;
+    margin-right: 50px;
+}
+
+.right .page-con {
+    padding-left: 15px;
+}
+
+.right .core {
+    height: 50px;
+    border-bottom: 2px solid #d9d9d9;
 }

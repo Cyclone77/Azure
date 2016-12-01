@@ -71,7 +71,7 @@ $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 ### 插入图片
 
 <p align="center">
-  <img alt="测试图片" src="{{ site.baseurl }}/images/jekyll-1.png">
+  <img alt="测试图片" src="{{ site.baseurl }}/images/page/jekyll-1.png">
 </p>
 
 ## 印象笔记相关

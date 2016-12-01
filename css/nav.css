@@ -1,4 +1,4 @@
-.nav-cy{
+.nav-cy {
     position: fixed;
     width: 45px;
     z-index: 1000;
@@ -8,14 +8,45 @@
     height: 100%;
     background: #2a2a2a;
 }
-.nav-cy .navbar li{
+
+.nav-cy .navbar li {
     display: block;
 }
-.nav-cy .navbar .menu{
-    height: 45px;
-    width: 45px;
-    display: block;    
+
+.nav-cy .navbar .menu {
+    display: block;
+    padding: 14px;
+    text-shadow: 0 1px 0 black;
 }
-.nav-cy .navbar .menu-select{
+
+.nav-cy .navbar .menu:hover {
+    background-color: #f49484; 
+    text-shadow: 0 1px 0 #de533a;
+}
+
+.nav-cy .navbar .menu-select {
     background: #e78170;
+    text-shadow: 0 1px 0 #de533a;
+}
+
+
+/*图标*/
+
+.menu i {
+    height: 16px;
+    width: 16px;
+    display: block;
+    margin: auto;
+}
+
+.menu i.index {
+    background-image: url(../font-img/index.png);
+}
+
+.menu i.about {
+    background-image: url(../font-img/about.png);
+}
+
+.menu i.phone {
+    background-image: url(../font-img/phone.png);
 }
