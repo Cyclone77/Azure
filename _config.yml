@@ -6,3 +6,5 @@ kramdown:
   input: GFM
   
 paginate: 2
+
+gems: [jekyll-paginate]

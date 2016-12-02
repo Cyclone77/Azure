@@ -1,5 +1,12 @@
 $(function() {
-
+    var href = window.location.href;
+    var pos = href.indexOf('?tag=');
+    var paraStr = href.substring(pos + 5);
+    if (pos > 0) {
+        showTag(decodeURI(paraStr));
+    } else {
+        showTag("");
+    }
 })
 
 function showTag(tagStr) {

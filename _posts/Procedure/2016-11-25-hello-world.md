@@ -2,7 +2,7 @@
 layout: page
 title: 你好，世界
 tags:
-    - Other
+    - 杂文
 ---
 
 # {{ page.title }}

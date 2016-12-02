@@ -24,16 +24,6 @@ layout: default
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    var href = window.location.href;
-    var pos = href.indexOf('?tag=');
-    var paraStr = href.substring(pos + 5);
-    if (pos > 0) {
-        showTag(decodeURI(paraStr));
-    } else {
-        showTag("");
-    }
-</script>
 
 <h2>{{ page.title }}</h2>
 <p>最新文章</p>
@@ -42,11 +32,10 @@ layout: default
     <li>
         {{ post.date | date: "%Y-%m-%d"  }} 
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <span>{{ paginator.total_pages }}</span>
     </li>
     {% endfor %}
 </ul>
-
+<p>{{paginator.posts[0].title}}</p>
 <div class="pageBar">
 {% for post in paginator.posts %}
 <div class="post-preview">
