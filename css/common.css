@@ -9,9 +9,13 @@ body {
     font-size: 12px;
     line-height: 1.5em;
     background: #fefefe;
+    margin: 0;
 }
 button, input, select, textarea{
     outline: 0 none;
+}
+a{
+    text-decoration: none;
 }
 
 /*图标*/
