@@ -4,3 +4,5 @@ markdown: kramdown
 
 kramdown:
   input: GFM
+  
+paginate: 2

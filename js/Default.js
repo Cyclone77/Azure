@@ -1,9 +1,9 @@
 $(function() {
-    
+
 })
 
- function showTag(tagStr) {
-     $.getJSON("../post.json", function(data) {
+function showTag(tagStr) {
+    $.getJSON("../post.json", function(data) {
         $('#show-tag').empty(content);
         var content = "<h2>分类：" + tagStr + "</h2><ul class=\"posts\">";
         var count = 0;
@@ -25,4 +25,4 @@ $(function() {
             $('#show-tag>h2').append(postNumStr);
         }
     })
- }
+}
