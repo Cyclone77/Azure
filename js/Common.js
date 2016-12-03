@@ -1,4 +1,4 @@
-﻿; (function (window, undefined) {
+; (function (window, undefined) {
 
     var ensure = function (obj, name, factory) {
         return obj[name] || (obj[name] = factory());
@@ -72,3 +72,75 @@
     });
 
 })(window);
+
+;(function(){
+    //工具箱
+    var tool = {
+        /*
+         *  合并两个对象，浅拷贝
+         *  @param {Object} obj1
+         *  @param {Object} obj2
+         */
+        extend: function(obj1, obj2) {
+            if (!obj2 && this._typeof(obj2) != "object") return;
+
+            for (var key in obj2) {
+                if (obj2.hasOwnProperty(key)) {
+                    obj1[key] = obj2[key];
+                }
+            }
+
+            return obj1;
+        },
+        /*
+         *   获取目标数据类型
+         *   @param {Object} obj
+         */
+        _typeof: function(obj) {
+            if (obj == null) {
+                return String(obj);
+            }
+            return typeof obj === "object" || typeof obj === "function" ?
+                class2type[class2type.toString.call(obj)] || "object" :
+                typeof obj;
+        },
+        /*
+         *   为dom元素添加指定事件
+         *   @element {Object} Dom对象
+         *   @type {String} 事件名称
+         *   @handler {Function} 事件处理函数
+         */
+        addHandler: function(element, type, handler) {
+            if (element.addEventListener) {
+                element.addEventListener(type, handler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent("on" + type, handler);
+            } else {
+                element["on" + type] = handler;
+            }
+        },
+        /*
+         *   为dom元素删除指定事件
+         *   @element {Object} Dom对象
+         *   @type {String} 事件名称
+         *   @handler {Function} 事件处理函数
+         */
+        removerHandler: function(element, type, handler) {
+            if (element.removeEventListener) {
+                element.removeEventListener(type, handler, false);
+            } else if (element.detachEvent) {
+                element.detachEvent("on" + type, handler);
+            } else {
+                element["on" + type] = null;
+            }
+        }
+    };
+
+    //数据类型
+    var class2type = {};
+    "Boolean Number String Function Array Date RegExp Object Error".split(" ").forEach(function(e, i) {
+        class2type["[object " + e + "]"] = e.toLowerCase();
+    });
+    
+    window.tool = tool;
+})();

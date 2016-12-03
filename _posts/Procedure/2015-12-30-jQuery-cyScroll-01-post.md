@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  jQuery滚动条插件
+subtitle: 美化IE下的滚动条
 tags:
     - 前端开发
     - JavaScript

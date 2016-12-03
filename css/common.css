@@ -76,3 +76,39 @@ background:rgb(215,48,48);
 color:white;
 background:rgb(215,48,48);
 }
+
+/*导航工具条*/
+.nav-cy {
+    position: fixed;
+    width: 45px;
+    z-index: 1000;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #2a2a2a;
+}
+.nav-cy *{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-cy .navbar li {
+    display: block;
+}
+
+.nav-cy .navbar .menu {
+    display: block;
+    padding: 14px;
+    text-shadow: 0 1px 0 black;
+}
+
+.nav-cy .navbar .menu:hover {
+    background-color: #f49484; 
+    text-shadow: 0 1px 0 #de533a;
+}
+
+.nav-cy .navbar .menu-select {
+    background: #e78170;
+    text-shadow: 0 1px 0 #de533a;
+}
