@@ -130,3 +130,14 @@
     right: 0;
     position: absolute;
 }
+
+/*文章列表*/
+.tagsArticle{
+    margin-top: 30px;
+}
+.tagsArticle .listing-item{
+    display: block;
+}
+.listing-item .time{
+    display: block;
+}

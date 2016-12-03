@@ -82,6 +82,12 @@ document.ready = function(callback) {
         }
     };
 
+    //数据类型
+    var class2type = {};
+    "Boolean Number String Function Array Date RegExp Object Error".split(" ").forEach(function(e, i) {
+        class2type["[object " + e + "]"] = e.toLowerCase();
+    });
+
     //初始化加载
     document.ready(function() {
         loadTagData();
@@ -139,7 +145,12 @@ document.ready = function(callback) {
         };
         xhr.send();
     }
-    
+
+    //选中样式
+    function selectTagClass(element) {
+
+    }
+
     //获取选中标签内容
     function showTag(tagStr) {
         var json = Store("session").get("fillchar_tags");
@@ -157,14 +168,27 @@ document.ready = function(callback) {
         }
     };
 
+    //构造标签文章内容
     function loadArticle(data, tagStr) {
-        $('#show-tag').empty(content);
-        var content = "<h2>分类：" + tagStr + "</h2><ul class=\"posts\">";
+        //$('#show-tag').empty(content);
+        document.getElementById("show-tag").innerHTML = "";
+        var content = ""; //<h2>分类：" + tagStr + "</h2><ul class=\"posts\">";
         var count = 0;
-        $.each(data, function(i, item) {
+        Array.prototype.forEach.call(data, function(item, i) {
             $.each(item.tags, function(j, tag) {
                 if (tag == tagStr) {
-                    content += "<li class=\"listing-item\"><time datetime=\"" + item.date + "\">" + item.date + "</time><a href=\"" + item.url + "\">" + item.title + "</a></li>";
+                    //content += "<li class=\"listing-item\"><time datetime=\"" + item.date + "\">" + item.date + "</time><a href=\"" + item.url + "\">" + item.title + "</a></li>";
+                    var htm = [
+                        '<li class="listing-item">',
+                        '<time class="time">',
+                        item.date,
+                        '</time>',
+                        '<a class="title" href="' + item.url + '">',
+                        item.title,
+                        '</a>',
+                        '</li>'
+                    ];
+                    content += (htm.join(""));
                     count++;
                 }
             });
