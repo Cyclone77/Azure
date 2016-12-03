@@ -1,6 +1,7 @@
 html {
     background: #fefefe;
     font-size: 100%;
+    height: 100%;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     line-height: 1.5em;
     background: #fefefe;
     margin: 0;
+    height: 100%;
 }
 button, input, select, textarea{
     outline: 0 none;
@@ -39,4 +41,38 @@ a{
 }
 .menu i.find {
     background-image: url(../font-img/find.png);
+}
+
+/**/
+::-webkit-scrollbar {
+width:10px;
+height:10px;
+}
+::-webkit-scrollbar-track-piece {
+background-color:#fff !important;
+}
+::-webkit-scrollbar-thumb {
+border-radius:0;
+background-color:#7c8286;
+}
+::-webkit-scrollbar-thumb:hover {
+background-color:#60676b;
+}
+::-webkit-scrollbar-thumb:active {
+background-color:#60676b;
+}
+::-webkit-scrollbar-thumb:active {
+background-color: #7c8286;
+}
+::selection {
+	color: white;
+	background: rgb(215,48,48);
+}
+::-moz-selection {
+color:white;
+background:rgb(215,48,48);
+}
+::-webkit-selection {
+color:white;
+background:rgb(215,48,48);
 }
