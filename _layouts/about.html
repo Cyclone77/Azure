@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
 
+<head>
+    <meta charset="utf-8">
+    <!--移动端的页面这个可以忽略，具体可以查看本文Internet Explorer浏览器部分-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 告诉 Google 不提供此页面的翻译 -->
+    <meta name="google" content="notranslate">
+    <!--360 浏览器就会在读取到这个标签后，立即切换对应的极速核。-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/common.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/about.css" />
+</head>
 
 <body>
-    {% include nav.html %}
-    {{ content }}
-
+    
+    <!--nav-->
+    <div class="nav-cy">
+        {% include nav.html %}
+    </div>
+    
+    <div class="about-container">
+        
+        {{ content }}
+        
+    </div>
+    
 </body>
 
 </html>
