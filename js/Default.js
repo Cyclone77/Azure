@@ -45,6 +45,7 @@ document.ready = function(callback) {
 
     //标签加载事件
     function loadEvent() {
+        //标签点击事件
         var tags = document.getElementsByClassName("tag_item");
         if (tags && tags.length > 0) {
             for (var i = 0; i < tags.length; i++) {
@@ -53,6 +54,15 @@ document.ready = function(callback) {
                     location.hash = tag;
                 })
             }
+        }
+        //分类文章
+        var place = document.getElementsByClassName("place")[0],
+            btns = place.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            tool.addHandler(btns[i], "click", function() {
+                var func = this.getAttribute("func");
+                tool._typeof(headCore[func]) == "function" && headCore[func]();
+            })
         }
     }
 
@@ -131,4 +141,25 @@ document.ready = function(callback) {
             tagEl.innerHTML = content;
         }
     }
+
+    //头部内容
+    var headCore = {
+        //分类文章
+        classifyArticle: function() {
+            var classpage = document.getElementsByClassName("page-con")[0],
+                allpage = document.getElementsByClassName("all-page")[0];
+            allpage.style.display = "none";
+            classpage.style.display = "block";
+            
+        },
+        //所有文章
+        allArticle: function() {
+            var classpage = document.getElementsByClassName("page-con")[0],
+                allpage = document.getElementsByClassName("all-page")[0];
+            classpage.style.display = "none";
+            allpage.style.display = "block";
+            
+        }
+    };
+
 })();

@@ -16,8 +16,8 @@
             <div class="right">
                <div class="core">
                     <ul class="place">
-                        <li><a class="btn sel" href="javascript:;">分类文章</a></li>
-                        <li><a class="btn" href="javascript:;">所有文章</a></li>
+                        <li><a class="btn sel" href="javascript:;" func="classifyArticle">分类文章</a></li>
+                        <li><a class="btn" href="javascript:;" func="allArticle">所有文章</a></li>
                     </ul>
                     <div class="form-item search">
                         <input type="search" name="search" id="search" placeholder="Search"> 
@@ -26,8 +26,11 @@
                 </div>
                 <div class="container">
                    <div class="page-con">
-                    {{ content }}
+                    {{ content }}                    
                     </div>
+                    <div class="all-page">
+                        {% include allArticle.html %}
+                    </div>                    
                 </div>
             </div>
         </div>
