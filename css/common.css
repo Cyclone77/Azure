@@ -19,7 +19,9 @@ button, input, select, textarea{
 a{
     text-decoration: none;
 }
-
+figure{
+    margin: 0;
+}
 /*图标*/
 .menu i {
     height: 16px;

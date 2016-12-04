@@ -68,6 +68,17 @@ document.ready = function(callback) {
 
     //加载标签下的文章
     function loadTagData(fn) {
+        var sessionData = Store("session").get("fillchar_tags");
+        try {
+            var jsonData = ArticleData = JSON.parse(sessionData);
+        } catch (e) {
+            throw e;
+        }
+        if (jsonData && jsonData.length > 0) {
+            ArticleData = jsonData;
+            tool._typeof(fn) == "function" && fn(jsonData);
+            return;
+        }
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "../post.json", true);
         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
@@ -150,7 +161,7 @@ document.ready = function(callback) {
                 allpage = document.getElementsByClassName("all-page")[0];
             allpage.style.display = "none";
             classpage.style.display = "block";
-            
+
         },
         //所有文章
         allArticle: function() {
@@ -158,7 +169,7 @@ document.ready = function(callback) {
                 allpage = document.getElementsByClassName("all-page")[0];
             classpage.style.display = "none";
             allpage.style.display = "block";
-            
+
         }
     };
 
