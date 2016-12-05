@@ -242,3 +242,19 @@ figure {
     background: #e78170;
     text-shadow: 0 1px 0 #de533a;
 }
+
+/*页脚*/
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    border-top: 1px solid #cccccc;
+}
+.copyright{
+    text-align: center;
+}
+.footer-container{
+    position: relative;
+}

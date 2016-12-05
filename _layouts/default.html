@@ -13,29 +13,29 @@
         <div class="show-con">
             <!--logo-->
             <div class="left">
-                
+
             </div>
             <div class="right">
-               <div class="core">
+                <div class="core">
                     <ul class="place">
                         <li><a class="btn sel" href="javascript:;" func="classifyArticle">分类文章</a></li>
                     </ul>
                     <div class="form-item search">
-                        <input type="search" name="search" id="search" placeholder="Search"> 
+                        <input type="search" name="search" id="search" placeholder="Search">
                         <button type="button" class="icon-search menu"><i class="icono-search"></i></button>
                     </div>
                 </div>
                 <div class="container">
-                   <div class="page-con">
-                    {{ content }}                    
+                    <div class="page-con">
+                        {{ content }}
                     </div>
-                    <div class="all-page">
-                        {% include allArticle.html %}
-                    </div>                    
                 </div>
+
+                {% include footer.html %}
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
