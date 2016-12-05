@@ -13,6 +13,7 @@
     left: 45px;
     width: 300px;
     background-image: url(../images/leftbg_small_min.jpg);
+    background-image: url(../images/leftbg_small_min.jpg);
     background-position: center;
     background-size: cover;
     filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
@@ -90,7 +91,7 @@
 .search input[type="search"] {
     width: 298px;
     height: 40px;
-    border: 3px solid #cccccc;
+    border: 3px solid #939393;
     text-indent: 5px;
 }
 
@@ -101,7 +102,7 @@
     width: 24px;
     height: 25px;
     border: none;
-    background-color: #cccccc;
+    background-color: #939393;
     cursor: pointer;
 }
 

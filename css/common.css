@@ -13,73 +13,190 @@ body {
     margin: 0;
     height: 100%;
 }
-button, input, select, textarea{
+
+button,
+input,
+select,
+textarea {
     outline: 0 none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-figure{
+
+figure {
     margin: 0;
 }
-/*图标*/
-.menu i {
-    height: 16px;
+
+
+/*CSS3图标*/
+
+
+/*home*/
+
+[class*=icono-] {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    color: #ddd;
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr;
+    box-sizing: border-box;
+}
+
+.icono-home,
+.icono-home:after,
+.icono-home:before,
+.icono-user,
+.icono-user:after,
+.icono-user:before,
+.icono-iphoneBold,
+.icono-search{
+    border: 2px solid;
+}
+
+.icono-user:before,
+.icono-search:before{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.icono-home {
+    height: 10px;
+    width: 14px;
+    border-top: none;
+    top: 5px;
+}
+
+[class*=icono-]:after,
+[class*=icono-]:before {
+    content: '';
+    pointer-events: none;
+}
+
+.icono-home:before {
+    width: 11px;
+    height: 11px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: -2px;
+    top: -7px;
+    border-right-color: rgba(57, 23, 23, 0);
+    border-bottom-color: rgba(45, 21, 21, 0);
+}
+
+.icono-home:after {
+    width: 4px;
+    height: 6px;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-width: 1px;
+    border-bottom: none;
+}
+
+
+/*user*/
+
+.icono-user {
+    width: 18px;
+    height: 8px;
+    border-radius: 50% 50% 0 0;
+    top: 10px;
+}
+
+.icono-user:before {
+    width: 6px;
+    height: 6px;
+    top: -14px;
+    border-radius: 50%;
+}
+
+
+/*phone*/
+.icono-iphoneBold {
+    width: 12px;
+    height: 24px;
+    margin: 1px 7px;
+    border-radius: 2px;
+    border-width: 4px 1px;
+    top: 0;
+}
+
+/*find*/
+.icono-search {
+    top: 0;
     width: 16px;
-    display: block;
-    margin: auto;
+    height: 16px;
+    border-radius: 50%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
-
-.menu i.index {
-    background-image: url(../font-img/index.png);
+.icono-search:before {
+    width: 3px;
+    height: 6px;
+    box-shadow: inset 0 0 0 20px;
+    top: 14px;
+    border-radius: 0 0 1px 1px;
 }
-
-.menu i.about {
-    background-image: url(../font-img/about.png);
-}
-
-.menu i.phone {
-    background-image: url(../font-img/phone.png);
-}
-.menu i.find {
-    background-image: url(../font-img/find.png);
-}
-
 /**/
+
 ::-webkit-scrollbar {
-width:10px;
-height:10px;
+    width: 10px;
+    height: 10px;
 }
+
 ::-webkit-scrollbar-track-piece {
-background-color:#fff !important;
+    background-color: #fff !important;
 }
+
 ::-webkit-scrollbar-thumb {
-border-radius:0;
-background-color:#7c8286;
+    border-radius: 0;
+    background-color: #7c8286;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-background-color:#60676b;
+    background-color: #60676b;
 }
+
 ::-webkit-scrollbar-thumb:active {
-background-color:#60676b;
+    background-color: #60676b;
 }
+
 ::-webkit-scrollbar-thumb:active {
-background-color: #7c8286;
+    background-color: #7c8286;
 }
+
 ::selection {
-	color: white;
-	background: rgb(215,48,48);
+    color: white;
+    background: rgb(215, 48, 48);
 }
+
 ::-moz-selection {
-color:white;
-background:rgb(215,48,48);
+    color: white;
+    background: rgb(215, 48, 48);
 }
+
 ::-webkit-selection {
-color:white;
-background:rgb(215,48,48);
+    color: white;
+    background: rgb(215, 48, 48);
 }
+
 
 /*导航工具条*/
+
 .nav-cy {
     position: fixed;
     width: 45px;
@@ -90,7 +207,8 @@ background:rgb(215,48,48);
     height: 100%;
     background: #2a2a2a;
 }
-.nav-cy *{
+
+.nav-cy * {
     margin: 0;
     padding: 0;
 }
@@ -100,13 +218,23 @@ background:rgb(215,48,48);
 }
 
 .nav-cy .navbar .menu {
+    height: 45px;
+    width: 45px;
     display: block;
-    padding: 14px;
     text-shadow: 0 1px 0 black;
+    position: relative;
+}
+
+.menu i{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .nav-cy .navbar .menu:hover {
-    background-color: #f49484; 
+    background-color: #f49484;
     text-shadow: 0 1px 0 #de533a;
 }
 
