@@ -24,18 +24,22 @@ document.ready = function(callback) {
 
     //初始化加载
     document.ready(function() {
-        loadTagData(function() {
-            var hash = location.hash;
-            if (!hash && !hash.substr(1)) {
-                var tagfirst = document.getElementsByClassName("tag_item")[0];
-                tagStr = tagfirst.getAttribute("i_tag");
-                hash = location.hash = tagStr;
-            } else {
-                showTag(hash.substr(1));
-            }
-        });
+        loadTagData(loadPage);
         loadEvent();
     });
+
+    //初始化
+    function loadPage() {
+        var hash = location.hash;
+
+        if (!hash && !hash.substr(1)) {
+            var tagfirst = document.getElementsByClassName("tag_item")[0];
+            tagStr = tagfirst.getAttribute("i_tag");
+            hash = location.hash = escape(tagStr);
+        } else {
+            showTag(hash.substr(1));
+        }
+    }
 
     //hash改变事件
     tool.addHandler(window, "hashchange", function() {
@@ -51,18 +55,9 @@ document.ready = function(callback) {
             for (var i = 0; i < tags.length; i++) {
                 tool.addHandler(tags[i], "click", function() {
                     var tag = this.getAttribute("i_tag");
-                    location.hash = tag;
+                    location.hash = escape(tag);
                 })
             }
-        }
-        //分类文章
-        var place = document.getElementsByClassName("place")[0],
-            btns = place.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-            tool.addHandler(btns[i], "click", function() {
-                var func = this.getAttribute("func");
-                tool._typeof(headCore[func]) == "function" && headCore[func]();
-            })
         }
     }
 
@@ -79,27 +74,16 @@ document.ready = function(callback) {
             tool._typeof(fn) == "function" && fn(jsonData);
             return;
         }
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "../post.json", true);
-        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                // 姑且认为200-300之间都是成功的请求，304是缓存
-                if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
-                    var data = xhr.responseText;
-                    try {
-                        var json = ArticleData = JSON.parse(data);
-                    } catch (e) {
-                        throw e;
-                    }
-                    Store("session").set("fillchar_tags", data);
-
-                    tool._typeof(fn) == "function" && fn(json);
-                }
+        tool.ajax("../post.json", function(data) {
+            try {
+                var json = ArticleData = JSON.parse(data);
+            } catch (e) {
+                throw e;
             }
-        };
-        xhr.send();
+            Store("session").set("fillchar_tags", data);
+            tool._typeof(fn) == "function" && fn(json);
+        })
     }
 
     //选中样式
@@ -109,6 +93,7 @@ document.ready = function(callback) {
 
     //获取选中标签内容
     function showTag(tagStr) {
+        tagStr = unescape(tagStr);
         var data = ArticleData;
         if (!data || data.length == 0) {
             loadTagData(function(newData) {
@@ -137,9 +122,6 @@ document.ready = function(callback) {
                         '<a class="title" href="' + item.url + '">',
                         item.title,
                         '</a>',
-                        '<p class="subtitle">',
-                        item.subtitle,
-                        '</p>',
                         '</div>'
                     ];
                     content += (htm.join(""));
@@ -152,25 +134,4 @@ document.ready = function(callback) {
             tagEl.innerHTML = content;
         }
     }
-
-    //头部内容
-    var headCore = {
-        //分类文章
-        classifyArticle: function() {
-            var classpage = document.getElementsByClassName("page-con")[0],
-                allpage = document.getElementsByClassName("all-page")[0];
-            allpage.style.display = "none";
-            classpage.style.display = "block";
-
-        },
-        //所有文章
-        allArticle: function() {
-            var classpage = document.getElementsByClassName("page-con")[0],
-                allpage = document.getElementsByClassName("all-page")[0];
-            classpage.style.display = "none";
-            allpage.style.display = "block";
-
-        }
-    };
-
 })();

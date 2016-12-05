@@ -133,6 +133,36 @@
             } else {
                 element["on" + type] = null;
             }
+        },
+        /*
+        *   为数组元素去空
+        *   @arr [Array] 数组
+        */
+        uniqueArr: function(arr){
+            // 构建一个新数组存放结果
+            var newArray = [];
+            for (var i = 0; i < arr.length; i++){
+                if(arr[i] && arr[i].trim()) {
+                    newArray.push(arr[i]);
+                }
+            }
+            return newArray;
+        },
+        ajax: function(url, callback){
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    // 姑且认为200-300之间都是成功的请求，304是缓存
+                    if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                        var data = xhr.responseText;
+                        tool._typeof(callback) == "function" && callback(data);
+                    }
+                }
+            };
+            xhr.send();
         }
     };
 
