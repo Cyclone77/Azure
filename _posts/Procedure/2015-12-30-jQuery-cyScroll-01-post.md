@@ -25,7 +25,7 @@ $("#divParent").cyScroll({
 {% endhighlight %}
 任何一个div都可以调用,说下插件内容：
 由于火狐，IE8以下，其他浏览器值得滚动事件不同，首先同化了浏览器的滚动事件的绑定方法：
-{% highlight ruby %}
+``` javascript
 wheel: function (obj, callback) {
     var wheelType = "mousewheel"
     try {
@@ -47,7 +47,7 @@ wheel: function (obj, callback) {
         callback.call(obj, event);//修正IE的this指向
     });
 }
-{% endhighlight %}
+```
 同化了滚动事件后就好办了，然后就是实现模拟滚动了.
 
 既然滚动条是div构成的那么可以发挥所有想的到的，比如滚动条div的背景可以是图片，更可以是动态图……可以用css3来实现炫酷的效果(可以自定义滚动条的样式).

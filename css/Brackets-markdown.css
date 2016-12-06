@@ -123,6 +123,12 @@
     background-color: #3d3d3d;
 }
 
+.markdown-body figure{
+    background-color: #3d3d3d;
+    padding: 10px 0;
+    border-radius: 3px;
+}
+
 .markdown-body pre {
     white-space: pre;
     white-space: pre-wrap;
@@ -130,7 +136,7 @@
 }
 
 .markdown-body pre {
-    padding: 0px 16px;
+    padding: 0px 15px;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
