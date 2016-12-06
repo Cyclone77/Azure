@@ -9,14 +9,20 @@
         {% include nav.html %}
     </div>
     <!--page-->
-    {{ page.title }}
-    <div class="markdown-body">
-        <div class="page-con">
-            {{ page }}
+
+    <div class="page-body">
+
+        <h1 class="title">
+            {{ page.title }}
+        </h1>
+        <div class="markdown-body">
+            <div class="page-con">
+                {{ page }}
+            </div>
         </div>
-    </div>
-    <div class="footer-container">
-        {% include footer.html %}
+        <div class="footer-container">
+            {% include footer.html %}
+        </div>
     </div>
 </body>
 
