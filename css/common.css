@@ -71,7 +71,7 @@ figure {
     height: 10px;
     width: 14px;
     border-top: none;
-    top: 5px;
+    top: 8px;
 }
 
 [class*=icono-]:after,
@@ -234,13 +234,13 @@ figure {
 }
 
 .nav-cy .navbar .menu:hover {
-    background-color: #f49484;
-    text-shadow: 0 1px 0 #de533a;
+    background-color: #807e86;
+    text-shadow: 0 1px 0 #8e7e86;
 }
 
 .nav-cy .navbar .menu-select {
-    background: #e78170;
-    text-shadow: 0 1px 0 #de533a;
+    background: #807e86;
+    text-shadow: 0 1px 0 #8e7e86;
 }
 
 /*页脚*/
